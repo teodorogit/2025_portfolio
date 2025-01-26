@@ -4,6 +4,7 @@ import './globals.css';
 import FixedHomeContent from '../components/FixedHomeContent/page';
 import { ReactNode } from 'react';
 // import '@fontsource/inter/variable.css';
+import { HeroUIProvider } from '@heroui/react';
 
 interface LayoutProps {
     children: ReactNode;
@@ -30,10 +31,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                <FixedHomeContent />
-                {children}
-            </body>
+            <HeroUIProvider>
+                <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+                    <FixedHomeContent />
+                    {children}
+                </body>
+            </HeroUIProvider>
         </html>
     );
 }

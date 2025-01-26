@@ -11,8 +11,8 @@ const index = () => {
         <nav className=" mb-2 py-2 shadow-md flex   md:flex-row items-center justify-between  md:gap-3 px-2 md:px-10  md:shadow-none">
             <p className="text-transparent fixed md:text-black md:relative">Matheus Teodoro</p>
             <div
-                className=" justify-evenly  w-screen relative  md:bg-gradient-to-t from-green-400 to-blue-300 h-auto flex   md:w-24
-             md:flex-col  md:fixed  md:bottom-1/3 left-0  md:gap-24  md:items-center  md:justify-center  md:py-28   md:rounded-tr-full  md:rounded-br-full"
+                className={`justify-evenly  w-screen relative  md:bg-gradient-to-t from-green-400 to-blue-300 h-auto flex   md:w-14
+             md:flex-col  md:fixed  md:bottom-[10%] left-0  md:gap-24  md:items-center  md:justify-center  md:py-28   md:rounded-tr-full  md:rounded-br-full`}
             >
                 <Link href="/">
                     <LuHouse className="text-2xl transition hover:text-yellow-700 md:hover:text-white  " />
