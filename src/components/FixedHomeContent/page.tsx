@@ -86,6 +86,7 @@ const page = () => {
                                         title="This is my wrritens about tecnologies themes
                                         Please feel free to click and read!"
                                         background="bg-amber-400 text-black"
+                                        isActive
                                     />
                                 </CardBody>
                             </Card>
