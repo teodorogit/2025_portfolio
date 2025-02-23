@@ -29,43 +29,44 @@ export default function Home() {
     };
 
     return (
-        <div className="w-screen px-6 py-6 bg-yellow-100">
-            <form className="bg-white p-6 rounded-lg shadow-md " onSubmit={handleSubmit}>
-                <h2 className="text-2xl font-bold mb-4">Enviar Email</h2>
-                <label className="block mb-2">
-                    Nome:
-                    <input
-                        type="text"
-                        className="w-full px-3 py-2 border rounded-md focus:outline-none"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                    />
-                </label>
-                <label className="block mb-2">
-                    Email:
-                    <input
-                        type="email"
-                        className="w-full px-3 py-2 border rounded-md focus:outline-none"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </label>
-                <label className="block mb-2">
-                    Mensagem:
-                    <textarea
-                        className="w-full px-3 py-2 border rounded-md focus:outline-none"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        required
-                    />
-                </label>
-                <button type="submit" className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
-                    Enviar
-                </button>
-                {status && <p className="mt-4 text-center">{status}</p>}
-            </form>
-        </div>
+        <form className="p-6 rounded-lg shadow-md md:w-1/2 w-auto sm:mt-24" onSubmit={handleSubmit}>
+            <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+            <label className="block mb-2">
+                Name:
+                <input
+                    type="text"
+                    className="w-full px-3 py-2 border rounded-md focus:outline-none"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                />
+            </label>
+            <label className="block mb-2">
+                E-mail:
+                <input
+                    type="email"
+                    className="w-full px-3 py-2 border rounded-md focus:outline-none"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+            </label>
+            <label className="block mb-2">
+                Message:
+                <textarea
+                    className="w-full px-3 py-2 border h rounded-md focus:outline-none min-h-20 max-h-48"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                />
+            </label>
+            <button
+                type="submit"
+                className="w-1/2 bg-green-100 shadow-sm text-black px-4 py-2 rounded-md hover:bg-green-300"
+            >
+                Save
+            </button>
+            {status && <p className="mt-4 text-center">{status}</p>}
+        </form>
     );
 }

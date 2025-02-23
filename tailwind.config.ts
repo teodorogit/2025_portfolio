@@ -1,4 +1,5 @@
-import { Montserrat } from 'next/font/google';
+import { Montserrat, Nunito } from 'next/font/google';
+
 import type { Config } from 'tailwindcss';
 
 const { heroui } = require('@heroui/react');
@@ -20,6 +21,7 @@ export default {
             },
             fontFamily: {
                 montserrat: ['Montserrat', 'sans-serif'],
+                nunito: ['Nunito', 'sans-serif'],
             },
         },
     },
